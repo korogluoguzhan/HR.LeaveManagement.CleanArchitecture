@@ -27,7 +27,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.CreateLeave
 
         private Task<bool> LeaveTypeNameUnique(CreateLeaveTypeCommand command, CancellationToken token)
         {
-            return _leaveTypeRepository.IsLeaveTypeUnique(command.Name);
+            return _leaveTypeRepository.IsLeaveTypeUnique(0,command.Name);
         }
     }
 }
